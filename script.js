@@ -32,7 +32,7 @@ button.setAttribute("style", "margin-bottom:12px");
 body.prepend(button);
 
 button.addEventListener("click", () => {
-	let side_length = Number(prompt("what side length would you like"));
+	let side_length = Number(prompt("Enter the number of squares per side"));
 	if (side_length > 1 && side_length < 100) {
 		container.innerHTML = "";
 		createGrid(side_length);
