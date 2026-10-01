@@ -13,9 +13,19 @@ container.addEventListener("mouseover", (e) => {
 	let r = Math.floor(Math.random() * 256);
 	let g = Math.floor(Math.random() * 256);
 	let b = Math.floor(Math.random() * 256);
-	if (e.target.classList.contains("box")) {
-		e.target.style.backgroundColor = `rgb(${r},${g},${b},${opacity})`;
+	if (e.target.style.backgroundColor == "") {
+		if (e.target.classList.contains("box")) {
+			e.target.style.backgroundColor = `rgb(${r},${g},${b})`;
+			e.target.style.opacity = 0.1;
+		}
+	} else {
+		if (e.target.style.opacity <= 1) {
+			console.log("opacity", e.target.style.opacity);
+			e.target.style.opacity = Number(e.target.style.opacity) + 0.1;
+		}
 	}
+
+	console.log(e.target.style.backgroundColor == "");
 });
 createGrid();
 
