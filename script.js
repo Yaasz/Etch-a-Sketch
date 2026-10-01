@@ -10,8 +10,11 @@ function createGrid(side = 16) {
 	}
 }
 container.addEventListener("mouseover", (e) => {
+	let r = Math.floor(Math.random() * 256);
+	let g = Math.floor(Math.random() * 256);
+	let b = Math.floor(Math.random() * 256);
 	if (e.target.classList.contains("box")) {
-		e.target.style.backgroundColor = "black";
+		e.target.style.backgroundColor = `rgb(${r},${g},${b},${opacity})`;
 	}
 });
 createGrid();
