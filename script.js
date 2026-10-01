@@ -20,12 +20,9 @@ container.addEventListener("mouseover", (e) => {
 		}
 	} else {
 		if (e.target.style.opacity <= 1) {
-			console.log("opacity", e.target.style.opacity);
 			e.target.style.opacity = Number(e.target.style.opacity) + 0.1;
 		}
 	}
-
-	console.log(e.target.style.backgroundColor == "");
 });
 createGrid();
 
